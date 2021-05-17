@@ -45,4 +45,9 @@ defmodule IdParesImparesWeb.UserController do
     user = Accounts.list_users_pares()
     render(conn, "index.json", user: user)
   end
+
+  def id_impares(conn, _params) do
+    user = Accounts.list_users_impares()
+    render(conn, "index.json", user: user)
+  end
 end
