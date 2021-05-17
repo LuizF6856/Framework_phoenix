@@ -24,6 +24,16 @@ defmodule IdParesImpares.AccountsTest do
       assert Accounts.list_user() == [user]
     end
 
+    test "list_users_pares/0 returns all user pares" do
+      user = user_fixture()
+      assert Accounts.list_users_pares() == [user]
+    end
+
+    # test "list_users_pares/0 returns all user pares" do
+    #   user = user_fixture()
+    #   assert Accounts.list_users_pares == [user]
+    # end
+
     test "get_user!/1 returns the user with given id" do
       user = user_fixture()
       assert Accounts.get_user!(user.id) == user
