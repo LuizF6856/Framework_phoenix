@@ -29,6 +29,8 @@ defmodule IdParesImpares.AccountsTest do
       assert Accounts.list_users_pares() == [user]
     end
 
+    #Abaixo temos o teste que dá erro... 
+    
     # test "list_users_pares/0 returns all user pares" do
     #   user = user_fixture()
     #   assert Accounts.list_users_pares == [user]
