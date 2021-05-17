@@ -22,7 +22,7 @@ defmodule IdParesImpares.Accounts do
   end
 
   def list_users_pares do
-    Repo.all(u in User, where: u.id - 2*(u.id/2) == 0)
+    Repo.all(from u in User, where: u.id - 2*(u.id/2) == 0)
   end
 
   @doc """
