@@ -40,4 +40,9 @@ defmodule IdParesImparesWeb.UserController do
       send_resp(conn, :no_content, "")
     end
   end
+
+  def id_pares(conn, _params) do
+    user = Accounts.list_users_pares()
+    render(conn, "index.json", user: user)
+  end
 end
