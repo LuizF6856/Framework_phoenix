@@ -25,6 +25,10 @@ defmodule IdParesImpares.Accounts do
     Repo.all(from u in User, where: u.id - 2*(u.id/2) == 0)
   end
 
+  def list_users_impares do
+    Repo.all(from u in User, where: u.id - 2*(u.id/2) == 1)
+  end
+
   @doc """
   Gets a single user.
 
