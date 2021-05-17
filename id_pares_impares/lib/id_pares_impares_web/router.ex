@@ -12,6 +12,7 @@ defmodule IdParesImparesWeb.Router do
 
     get "/users_pares", UserController, :id_pares
 
+    get "/users_impares", UserController, :id_impares
   end
 
   # Enables LiveDashboard only for development
