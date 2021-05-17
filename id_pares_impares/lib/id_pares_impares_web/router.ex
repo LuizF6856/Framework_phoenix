@@ -7,6 +7,8 @@ defmodule IdParesImparesWeb.Router do
 
   scope "/api", IdParesImparesWeb do
     pipe_through :api
+
+    resources "/user", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
