@@ -97,4 +97,11 @@ defmodule IdParesImparesWeb.UserControllerTest do
     user = fixture(:user)
     %{user: user}
   end
+
+  describe "pares" do
+    test "lists all user pares", %{conn: conn} do
+      conn = get(conn, Routes.user_path(conn, :id_pares))
+      assert json_response(conn, 200)["data"] == []
+    end
+  end 
 end
