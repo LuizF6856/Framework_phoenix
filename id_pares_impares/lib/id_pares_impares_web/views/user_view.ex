@@ -12,9 +12,9 @@ defmodule IdParesImparesWeb.UserView do
 
   def render("user.json", %{user: user}) do
     %{id: user.id,
-      name: user.name,
-      age: user.age,
-      email: user.email,
-      balance: user.balance}
+    name: user.name,
+    age: user.age,
+    balance: user.balance,
+    email: user.email}
   end
 end
