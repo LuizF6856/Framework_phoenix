@@ -28,9 +28,18 @@ defmodule IdParesImparesWeb.UserControllerTest do
   end
 
   describe "index" do
-    test "lists all user", %{conn: conn} do
+    test "lists all user without user on db", %{conn: conn} do
       conn = get(conn, Routes.user_path(conn, :index))
+      require IEx
+      IEx.pry
       assert json_response(conn, 200)["data"] == []
+    end
+      test "lists all user with one user on db", %{conn: conn} do
+        user = fixture(:user)
+        conn = get(conn, Routes.user_path(conn, :index))
+        require IEx
+        IEx.pry
+        assert json_response(conn, 200)["data"] == []
     end
   end
 
