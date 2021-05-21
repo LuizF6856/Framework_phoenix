@@ -26,7 +26,7 @@ defmodule IdParesImpares.AccountsTest do
       # require IEx
       # IEx.pry
       # IO.puts 3 
-      assert Accounts.list_user() == []
+      assert Accounts.list_user == [user]
     end
 
     # test "list_users_pares/0 returns all user pares" do

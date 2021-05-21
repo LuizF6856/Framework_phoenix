@@ -34,13 +34,13 @@ defmodule IdParesImparesWeb.UserControllerTest do
       IEx.pry
       assert json_response(conn, 200)["data"] == []
     end
-      test "lists all user with one user on db", %{conn: conn} do
-        user = fixture(:user)
-        conn = get(conn, Routes.user_path(conn, :index))
-        require IEx
-        IEx.pry
-        assert json_response(conn, 200)["data"] == []
-    end
+    #   test "lists all user with one user on db", %{conn: conn} do
+    #     user = fixture(:user)
+    #     conn = get(conn, Routes.user_path(conn, :index))
+    #     require IEx
+    #     IEx.pry
+    #     assert json_response(conn, 200)["data"] == []
+    # end
   end
 
   describe "create user" do
