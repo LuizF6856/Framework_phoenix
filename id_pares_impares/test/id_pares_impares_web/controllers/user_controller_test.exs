@@ -113,4 +113,12 @@ defmodule IdParesImparesWeb.UserControllerTest do
       assert json_response(conn, 200)["data"] == []
     end
   end 
+
+  describe "impares" do
+    test "lists all user impares", %{conn: conn} do
+      conn = get(conn, Routes.user_path(conn, :id_impares))
+      assert json_response(conn, 200)["data"] == []
+    end
+  end
+
 end
