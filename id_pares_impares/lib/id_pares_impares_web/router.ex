@@ -10,9 +10,9 @@ defmodule IdParesImparesWeb.Router do
 
     resources "/users", UserController, except: [:new, :edit]
 
-    get "/users_pares", UserController, :id_pares
+    get "/users_pares", ParesImparesController, :id_pares
 
-    get "/users_impares", UserController, :id_impares
+    get "/users_impares", ParesImparesController, :id_impares
   end
 
   # Enables LiveDashboard only for development
