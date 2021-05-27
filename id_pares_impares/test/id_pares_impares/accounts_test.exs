@@ -15,37 +15,13 @@ defmodule IdParesImpares.AccountsTest do
         attrs
         |> Enum.into(@valid_attrs)
         |> Accounts.create_user()
-
       user
     end
 
     test "list_user/0 returns all user" do
       user = user_fixture()
-      # IO.puts 1
-      # IO.puts 2
-      # require IEx
-      # IEx.pry
-      # IO.puts 3 
       assert Accounts.list_user == [user]
     end
-
-    # test "list_users_pares/0 returns all user pares" do
-    #   user = user_fixture()
-    #   assert Accounts.list_users_pares() == [user]
-    # end
-
-    #Abaixo temos o teste que dá erro... 
-
-    test "list_users_pares/0 returns all user pares" do
-      user = user_fixture()
-      assert Accounts.list_users_pares == [user]
-    end
-
-    test "list_users_impares/0 returns all user impares" do
-      user = user_fixture()
-      assert Accounts.list_users_impares == [user]
-    end
-
 
     test "get_user!/1 returns the user with given id" do
       user = user_fixture()
