@@ -13,6 +13,8 @@ defmodule IdParesImparesWeb.Router do
     get "/users_pares", ParesImparesController, :id_pares
 
     get "/users_impares", ParesImparesController, :id_impares
+
+    get "/Fibonacci/:name", FIbonacciController, :fibo 
   end
 
   # Enables LiveDashboard only for development
