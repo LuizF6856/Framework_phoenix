@@ -1,1 +1,7 @@
+erl_crash.dump
+
+/deps/
+   
+/_build/
+
 .DS_Store
