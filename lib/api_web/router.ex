@@ -8,7 +8,9 @@ defmodule ApiWeb.Router do
   scope "/api", ApiWeb do
     pipe_through :api
 
-    get "/Hello", HelloController, :hello
+    get "/hello", HelloController, :hello
+    
+    get "/hello/:messenger", HelloController, :hello_wih_params
   end
 
   # Enables LiveDashboard only for development

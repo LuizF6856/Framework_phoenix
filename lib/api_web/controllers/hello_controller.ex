@@ -5,6 +5,13 @@ defmodule ApiWeb.HelloController do
 
         conn
         |> put_status(:ok)
-        |> json({:ok, "Hello world"}) #Using an atom as the template name also works :hello
+        |> text("Hello world")
+    end
+
+    def hello_wih_params(conn, %{"messenger" => messenger}) do
+
+        conn 
+        |> put_status(:ok)
+        |> render("hello.json", messenger: messenger)
     end
 end
